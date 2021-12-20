@@ -153,7 +153,7 @@ function makeDone(id){
                 document.getElementById('markdn'+taskin.listId).remove();
                 taskin.set=false
             }
-        });//createList();
+        });createList();
         listCall(element.subTask);
     }); console.log(taskLi);
 }//---------------------------------------------------------------------
