@@ -86,8 +86,7 @@ function showList(){ //to show the task cards
     }else if(taskLi==0){
         noListp.style.display="block";
     };
-    createList();
-    // listCall(element.subTask);
+    createList();// listCall(element.subTask);
 }//---------------------------------------------------------------------
 function deleteTask(id){  // delete an object in array
     taskLi.forEach((element,index)=>{
@@ -118,11 +117,9 @@ function addTask(id){   /// want to pass this id to the create task function??
                         }
                         taskLi[index].subTask.push(taskin);
                     }
-                });
-            createList();listCall(element.subTask)
-            console.log(taskLi);
+                });createList();listCall(element.subTask);//console.log(taskLi);
             }
-        }  listCall(element.subTask);
+        }
     });
 }//---------------------------------------------------------------------
 function createList(){  //creating the list inside the cards
@@ -153,9 +150,8 @@ function makeDone(id){
                 document.getElementById('markdn'+taskin.listId).remove();
                 taskin.set=false
             }
-        });createList();
-        listCall(element.subTask);
-    }); console.log(taskLi);
+        });createList();listCall(element.subTask);
+    }); //console.log(taskLi);
 }//---------------------------------------------------------------------
 function callMe(id){
     pgSet=false;
@@ -178,8 +174,7 @@ function callMe(id){
     <i class="fa fa-plus-circle fa-2x" id="addThree" onclick="addTask(${currentSelect.id})"></i>`
     listCall(currentList);
 }//---------------------------------------------------------------------
-function listCall(e){
-    // console.log(e);
+function listCall(e){// console.log(e);
     let newTlist=``;
     let selTag = document.getElementById('new-list');
     e.forEach(taskin=>{
